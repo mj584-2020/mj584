@@ -1,0 +1,52 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}error-page{{ end }}
+{{ define "main" }}
+
+{{ with .Site.GetPage "/four-oh-four" }}
+<div class="home__overlay" id="home-overlay"></div>
+{{ partial "main-menu-mobile.html" . }}
+
+<nav>
+  <!--full screen-->
+  <div class="header" id="header">
+    {{ partial "header.html" . }}
+  </div>
+  <!--hamburger-->
+  <div class="header-mobile" id="hamburger">
+    {{ partial "hamburger.html" . }}
+  </div>
+</nav>
+
+<section class="error__container bg-cover bg-position-center">
+  <img src="https://uprooted.unc.edu/images/404/404-error-icon-updated.svg"
+    alt="404 error with arepa icon as the zero" />
+</section>
+{{ .Content }}
+
+<div id="error__bts">
+  <!-- I will dynamically build this out using Javascript-->
+</div>
+
+
+<footer class="flex-column">
+  {{ partial "footer.html" . }}
+</footer>
+
+{{ end }}
+
+{{ end }}
+
+{{define "scripts" }}
+{{ $header := resources.Get "js/header.js" }}
+{{ $hamburger := resources.Get "js/hamburger.js"}}
+{{ $404 := resources.Get "js/404.js"}}
+{{ $404bundle := slice $header $hamburger $404 | resources.Concat "js/404bundle.js" }}
+
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ $404bundle.RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($404bundle | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
+{{end }}

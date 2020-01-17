@@ -1,0 +1,93 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}about{{ end }}
+{{ define "main" }}
+{{ partial "main-menu-mobile.html" . }}
+<div class="home__overlay" id="home-overlay"></div>
+<nav>
+  <!--full screen-->
+  <div class="header" id="header">
+    {{ partial "header.html" . }}
+  </div>
+  <!--hamburger-->
+  <div class="header-mobile" id="hamburger">
+    {{ partial "hamburger.html" . }}
+  </div>
+</nav>
+{{ partial "story-hero.html" (dict "layout" .Params.layout "image" .Params.image "heading" .Params.storyHeading "subheading" .Params.storySubheading "content" .) }}
+
+<section class="about__intro flex-column">
+  <h1 class="about__heading">{{ .Params.AboutUs}}</h1>
+  {{ .Content }}
+  <h2 class="about__heading">{{ .Params.meet }}</h2>
+</section>
+
+<div class="container">
+  <div id="team">
+    <div class="about__filter-container">
+      <div class="controls about__filter flex">
+        <div data-filter="all">{{ .Params.everyoneFilter }}</div>
+        <div data-filter=".photovid">{{ .Params.photovidFilter }}</div>
+        <div data-filter=".rep">{{ .Params.repFilter }}</div>
+        <div data-filter=".int">{{ .Params.designFilter }}</div>
+        <div data-filter=".coach">{{ .Params.coachFilter }}</div>
+        <div data-filter=".field">{{ .Params.udeaFilter }}</div>
+      </div>
+    </div>
+
+    <div class="about__content flex">
+      {{ $language := .Site.LanguageCode }}
+      {{ range .Site.Data.about }}
+      {{ partial "about-info.html" (dict "language" $language "data" .) }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="about__thanks">
+  <div class="about__heading">{{ .Params.thx }}</div>
+  <ul class="about__thanks-list">
+    <li>Mary Iguaran</li>
+    <li>Joaquín Alonso Gómez Meneses</li>
+    <li>Liana Pinner</li>
+    <li>Louise Spieler, Charlie Tuggle, Susan King</li>
+    <li>{{ .Params.mejo557 }}</li>
+  </ul>
+</div>
+
+<footer>
+  <div class="footer__social">
+    <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}images/logo-footer-black.png"
+        alt="Uprooted footer logo" /></a>
+    {{ partial "ybr-line.html" . }}
+    <div class="footer__social-icons flex">
+      <a href="https://facebook.com/uprootedunc" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/@uprootedunc" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/uprootedunc" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer__about">
+      <a href="{{ .Site.BaseURL }}{{ .Params.aboutUsURL }}">
+        {{ .Params.aboutUs }}
+      </a>
+    </div>
+  </div>
+</footer>
+{{ end }}
+
+{{ define "scripts" }}
+{{ $header := resources.Get "js/header.js" }}
+{{ $about := resources.Get "js/about.js" }}
+{{ $hamburger := resources.Get "js/hamburger.js" }}
+{{ $mixitup := resources.Get "js/mixitup.min.js" }}
+{{ $aboutpageBundle := slice $header $about $hamburger $mixitup | resources.Concat "js/aboutpageBundle.js" }}
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ $aboutpageBundle.RelPermalink }}">
+</script>
+{{ else }}
+<script type="text/javascript" src="{{ ($aboutpageBundle | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+{{ block "footer_js" . }}
+<script>
+  var mixer = mixitup('#team');
+</script>
+{{ end }}
+{{ end }}

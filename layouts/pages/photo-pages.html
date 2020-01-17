@@ -1,0 +1,71 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}story-page photo{{ end }}
+{{ define "main" }}
+<div class="home__overlay" id="home-overlay"></div>
+{{ partial "main-menu-mobile.html" . }}
+<nav>
+  <!--full screen-->
+  <div class="header" id="header">
+    {{ partial "header.html" . }}
+  </div>
+  <!--hamburger-->
+  <div class="header-mobile" id="hamburger">
+    {{ partial "hamburger.html" . }}
+  </div>
+</nav>
+{{ partial "story-hero.html" (dict "alt" .Params.heroAlt "layout" .Params.layout "image" .Params.image "heading" .Params.storyHeading "subheading" .Params.storySubheading "topic" .Params.topic "content" .) }}
+
+<div class="story-content">
+  <div class="byline-container">
+    <div class="flex-column byline">
+      <div class="byline-name">{{ .Params.photoTitle }}
+        <span>{{ .Params.photographer }}</span>
+      </div>
+      {{ if eq .Params.designer "undefined" }}
+      {{ else }}
+      <div class="byline-name" id="byline-des">{{ .Params.designTitle }} <span>{{ .Params.designer }}</span></div>
+      {{ end }}
+      <div class="byline-name" id="byline-udea">{{ .Params.udeaTitle }} <span>{{ .Params.udea }}</span></div>
+      {{ partial "ybr-line.html" . }}
+    </div>
+  </div>
+  {{ .Content }}
+  <img class="story-end-icon" src="{{ .Site.BaseURL}}images/end-story-icon.svg">
+</div>
+
+<div class="progress">
+  <div class="progress__bar" id="photo-bar"></div>
+</div>
+
+<footer class="flex-column">
+  {{ partial "footer-photo-stories.html" . }}
+</footer>
+{{ end }}
+
+{{ define "scripts" }}
+{{ $header:= resources.Get "js/header.js" }}
+{{ $hamburger := resources.Get "js/hamburger.js" }}
+{{ $progressBar := resources.Get "js/progressBar.js" }}
+{{ $imagemap := resources.Get "js/imageMap.js"}}
+
+{{ if eq .Weight 2}}
+{{ $imageMapBundle := slice $header $hamburger $progressBar $imagemap | resources.Concat "js/imageMapBundle.js" }}
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ $imageMapBundle.RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($imageMapBundle | minify | fingerprint).RelPermalink }}"></script>
+{{end}}
+
+{{else}}
+{{ $photoPagesBundle := slice $header $hamburger $progressBar | resources.Concat "js/photoPagesBundle.js" }}
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ $photoPagesBundle.RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($photoPagesBundle | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+{{ end }}
+{{ block "footer_js" . }}
+{{ end }}
+{{ end }}

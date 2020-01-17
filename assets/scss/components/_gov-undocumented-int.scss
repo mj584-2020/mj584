@@ -1,0 +1,448 @@
+#interactive__gov-undocumented {
+  position: relative;
+  transition: 0.7s;
+  margin:0 auto;
+  text-align: center;
+  max-width: 100vw;
+
+
+  #r-1{
+    height: 20%;
+    width: 100%;
+  }
+
+  #r-2{
+    width: 75%;
+  }
+
+  #r-2-c-2 {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+
+  .slideshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:72%;
+    margin: 0 auto;
+  }
+
+  .document-box {
+    max-width: 225px;
+    margin-left: 6%;
+    margin-right: 6%;
+    flex-direction: column;
+    border-bottom: solid 2px;
+    border-color: #f2f2f2;
+  }
+
+  .document-box:hover {
+    cursor: pointer;
+    border-bottom: solid 2px;
+    border-color: $black;
+    transition: 0.7s;
+  }
+
+  .document-img {
+    height: 35vh;
+    width: 20vw;
+    padding-bottom: 20%;
+    img {
+      max-width: 20vw;
+    }
+  }
+
+  .passport-svg {
+    max-height: 25vh;
+    height: 100%;
+    width: auto;
+  }
+
+  .pep-svg {
+    max-height: 25vh;
+    height: 100%;
+    width: auto;
+  }
+
+
+  .document-txt {
+    height: 10%;
+    width: 100%;
+  }
+
+  .document-caption{
+    padding-bottom: 5%;
+    font-size: 17pt;
+  }
+
+
+
+  #r-3{
+    margin-bottom: 4vh;
+    width: 100%;
+  }
+
+  .bottom-text {
+    font-size: 1rem;
+    color: $grey;
+    font-style: italic;
+  }
+
+  .container-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    z-index: 0;
+
+    .interactive__header {
+    }
+  }
+  .information-body {
+    display: none;
+  }
+  .passport-body {
+    z-index: 1200;
+  }
+
+  .back-button-row {
+    margin: 50px;
+
+  }
+  .back-button {
+    font-family: ddinexpbold,sans-serif;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: $red;
+    color: $white;
+    transition: border-bottom 0.2s;
+    width: 115px;
+    border-radius: 30px;
+  }
+
+  .back-button:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+  }
+
+  .back-button:hover:after {
+    transform: scaleX(1);
+  }
+
+  .information-title-svg {
+    padding-top:60px;
+    width: auto;
+    height: 70px;
+  }
+
+  .information-body-r1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  .information-body-r3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 40px 0;
+  }
+
+
+  /* slideshow */
+  .mySlides, .mySlides-passport {
+    // width: 100vw;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+
+  }
+  img {vertical-align: middle;}
+
+  .slideshow-buttons {
+    display: none;
+    position: absolute;
+    top: 200px;
+    justify-content: space-between;
+    width: 85%;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+
+  .prev, .next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    padding: 20px;
+    margin-top: -22px;
+    color: $black;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.5s ease;
+    border-radius: 3px 3px 3px 3px;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: $white;
+  }
+
+
+  .numbertext {
+    color: $white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .dot, .dot-passport, .dot-ID {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: $grey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover, .dot-passport:hover, .dot-ID:hover {
+    background-color: $yellow;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .slide-image {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap:3vw;
+    text-align: left;
+    margin:40px 0;
+    margin: auto;
+    img {
+      max-height: 200px;
+      max-width:100%;
+      float:right;
+    }
+  }
+
+  .slide-img-doc {
+    max-width: 100%;
+  }
+
+  .slide-image-ID {
+    grid-template-columns: 35% 65%;
+  }
+
+  .slide-image-pep {
+    grid-template-columns: 35% 65%;
+  }
+
+  .slide-img-expiration {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    img {
+      max-height: 150px;
+    }
+  }
+
+  .slide-txt, .slide-txt2 {
+    width: 100%;
+    text-align: left;
+    font-size: 14pt;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding-right: 70px;
+    p {
+      margin-top:0;
+    }
+  }
+  .slide-txt2 {
+    padding-left:30px;
+  }
+
+  .information-title {
+    border-bottom: 5px solid;
+    border-bottom-color: $yellow;
+    font-size:25px;
+    color: $black;
+    font-weight: 700;
+    padding:10px 0;
+  }
+
+  .information-title-passport {
+    height: 55px;
+  }
+
+  .border-blue {
+      border-bottom: 5px solid;
+      border-bottom-color: $blue;
+  }
+
+  .information-title-pep {
+    height: 65px;
+  }
+
+  .information-title-id {
+    height: 55px;
+  }
+
+  .border-red {
+    border-bottom: 5px solid;
+    border-bottom-color: $red;
+  }
+
+  .show {
+    display: flex !important;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .sources {
+    width: 100%;
+    text-align: left;
+    font-style: italic;
+  }
+
+}
+  /* mobile css */
+
+@media (max-width: 800px) and (min-width: 500px)  {
+  #interactive__gov-undocumented {
+    width:100%;
+  }
+
+  .slideshow-buttons {
+      width: 100% !important;
+    }
+
+    #r-2 {
+      flex-direction: row;
+      width: 100;
+      margin: 0 10vw;
+    }
+    .slide-image {
+      grid-template-columns: 1fr;
+      img {
+        max-height:150px;
+      }
+    }
+    .document-img img {
+      max-height:100px;
+      max-width: 150px;
+    }
+
+    .document-box {
+      border-bottom-width: 0;
+    }
+
+    .document-box:hover {
+      border-bottom-width: 0;
+    }
+    .slide-txt, .slide-txt2 {
+      padding:0 10vw
+    }
+
+    .back-button {
+      margin-left: 5vh;
+    }
+
+    .information-title{
+      font-size: 30px;
+      border-bottom-width: 5px;
+    }
+
+}
+
+
+  @media (max-width: 500px) {
+
+    #interactive__gov-undocumented {
+      width: 100%;
+
+    .document-img {
+     display: none;
+    }
+
+    #r-2 {
+      flex-direction: column;
+      width: 100%;
+      max-height: 50vh;
+      // padding-top: 5%;
+    }
+
+    .slide-txt {
+      max-width: 70vw !important;
+
+    }
+
+    .slide-image {
+      display: inline-block;
+
+      img {
+        max-width: 75vw !important;
+        max-height: 25vh !important;
+        margin-bottom: 40px;
+      }
+    }
+
+
+    .bottom-text {
+      font-size: 15px;
+    }
+
+    .slideshow-buttons {
+        width: 100% !important;
+      }
+
+    .document-box {
+      width: 100%;
+      flex-direction: column;
+      border-bottom: solid 0px;
+      margin: 5vh 0;
+    }
+
+    .document-box:hover {
+      border-bottom: solid 0px;
+    }
+    .prev,.next {
+      padding: 10px;
+    }
+
+}
+
+
+  }

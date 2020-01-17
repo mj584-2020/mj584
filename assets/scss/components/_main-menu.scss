@@ -1,0 +1,120 @@
+#main-menu-photos {
+
+  &.open {
+    display: grid;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'chap1 chap2 chap3 chap4';
+  }
+}
+
+.main-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: left;
+
+  &.open {
+    display: grid;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      'story1 story2 story3 story4 story5';
+  }
+
+  .main-menu__card {
+    position: relative;
+    height: 200px;
+    font-family: $font-nav;
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image:
+      linear-gradient(
+        rgba(0, 0, 0, .75),
+        rgba(0, 0, 0, 0)
+       );
+      z-index: 1;
+      transition: background-image 1s ease-in-out;
+    }
+
+    &:hover {
+      color: $black;
+
+      &::before {
+        background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, .5)
+        );
+        transition: background-image 1s ease-in-out;
+      }
+
+      .card__desc {
+        display: block;
+      }
+    }
+
+    .card__desc {
+      display: none;
+    }
+  }
+
+  .card__img{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .card__text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 0 10%;
+
+    .story-topic {
+      display: none;
+    }
+
+    .story-title {
+      font-family: $font-card-title;
+      margin-bottom: 0;
+    }
+
+    .ybr-line {
+      width: 50%;
+      height: 10px;
+
+      .ybr-section {
+        stroke-width: 3px;
+      }
+    }
+
+    .card__desc {
+      text-align: left;
+      font-family: $font-card-desc;
+      font-weight: $font-weight-bold;
+      transition: display .4s;
+      margin-top: 0;
+    }
+  }
+}

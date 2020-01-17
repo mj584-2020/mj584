@@ -1,0 +1,126 @@
+.header {
+  font-family: $font-nav;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  background-color: $yellow;
+  color: $black;
+  padding: 0;
+  height: 55px;
+  width: 100%;
+  
+  @media screen and (max-width: 800px){
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  .container {
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 100%;
+
+    .header__logo {
+      text-align: center;
+      flex-basis: 15%;
+    
+      a {
+        display: block;
+        font-family: $font-logo;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .header__nav {
+      flex-basis: 85%;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .header__nav > * {
+      padding: 4px 1vw 0;
+      text-align: center;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    .header__story-dropdown, .header__photo-dropdown {
+      text-align: center;
+      transition: ease 0.1s;
+      cursor: pointer;
+      
+      &.is-active{
+        background: rgba(255, 255, 255, 0.9);
+        color: $red;
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+        padding-left: 5px;
+      }
+
+      .header__stories-button, .header__photo-button {
+        padding: 16px 0;
+      }
+    }
+
+    .header__lang-toggle{
+      text-transform: uppercase;
+
+      &>a:first-of-type::after{
+        content:" | ";
+        font-weight: 400;
+        color: $black;
+      }
+
+      .active {
+        font-weight: 900;
+      }
+
+      .header__lang-option:not(.active):hover {
+        color: $red;
+        font-weight: 900;
+      }
+    }
+
+    .header__social-icons{
+      font-size: 1rem;
+      text-align: center;
+
+      a {
+        margin: 0 3px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .header__social-icon {
+        padding: 5px 0;
+        height: 26px;
+        width: 26px;
+        background-color: $black;
+        color: $yellow;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}

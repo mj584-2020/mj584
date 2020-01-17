@@ -1,0 +1,33 @@
+<div class="cards">
+
+  {{ range where .Site.Pages.ByWeight "Params.card" true }}
+  <a href="{{.URL}}" class="card" id="card-{{.Params.weight}}">
+    {{if ne .Params.weight 6}}
+    <img class="card__img" src="{{ .Params.image }}" alt="Venezuela">
+    {{else}}
+    <img class="card__img" src="{{ .Params.imageHome }}" alt="Venezuela">
+    {{end}}
+    <div class="card__base">
+      <div class="card__heading">{{ .Params.topic }}</div>
+      {{ partial "ybr-line.html" . }}
+      <div class="card__title">{{ .Title }}</div>
+      <div class="card__button">
+        <div class="card__button-text">
+          {{ .Params.cta }} &nbsp; <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card__hover">
+      <div class="card__heading">{{ .Params.topic }}</div>
+      {{ partial "ybr-line.html" . }}
+      <div class="card__title">{{ .Title }}</div>
+      <div class="card__desc">{{ .Description }}</div>
+      <div class="card__button">
+        <div class="card__button-text">
+          {{ .Params.cta }} &nbsp; <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</div>

@@ -1,18 +1,29 @@
 ---
-title: 'About'
-date: 2018-12-06T09:29:16+10:00
-layout: 'aboutlayout'
-heroHeading: 'About Us'
-heroSubHeading: "Established in 1985, we're a team of advisors that puts your business first."
-heroBackground: 'https://source.unsplash.com/sO-JmQj95ec/1600x1000'
+title: "About Us"
+date: 2019-02-04T21:36:24-05:00
+description: "This is the description for the about page."
+storyHeading: "About Us"
+image: "../images/about-headerimage.jpg"
+card: false
+layout: "about"
+aboutUs: "About Us"
+aboutUsURL: "about/"
+footerCTA: "More from Uprooted"
+storiesHeader: "Stories"
+photosHeader: "Photo Journey"
+meet: "Meet the Team"
+everyoneFilter: "Everyone"
+photovidFilter: "Photo/Video"
+repFilter: "Reporters"
+designFilter: "Interactive"
+coachFilter: "Coaches"
+udeaFilter: "Field Producers"
+thx: "Special thanks to the following:"
+mejo557: "Students in MEJO 557: Advanced Editing"
 ---
 
-<div>
-{{< content-strip-left "/pages/about" "content1" >}}
-</div>
-<div>
-{{< content-strip-right "/pages/about" "content2" >}}
-</div>
-<div>
-{{< content-strip-center "/pages/about" "content3" >}}
-</div>
+{{<  center-quote "pages/about" "about-pull" >}}
+
+We are a team of student videographers, photographers, reporters, designers, developers and faculty dedicated to decoding the political and economic crisis in Venezuela by telling the stories of families who have fled to Medellín, Colombia. It's easy to get lost in the numbers and policy when covering Venezuela and its intrinsic, historic connection with Colombia. We hope these stories of struggle, resilience, acceptance and tension can provide clarity and encourage people to join the conversation and take action.
+
+Uprooted is an interactive multimedia project of MEJO 584: Documentary Multimedia Storytelling at the UNC-Chapel Hill School of Media and Journalism. In past projects, students have reported across five continents and produced award-winning multimedia work. As students, we’re learning the rewards and challenges of reporting on different cultures; as journalists, we are working as a team to tell the stories that are shaping the globe.

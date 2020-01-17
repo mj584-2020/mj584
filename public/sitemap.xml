@@ -3,99 +3,258 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/services/accounting/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/a-hopeful-voice/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/encontrando-su-voz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/a-hopeful-voice/"
+                />
   </url>
   
   <url>
-    <loc>/work/fall-plaza/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/brothers-on-the-pitch/</loc>
+    <lastmod>2019-02-04T21:35:11-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/hermanos-en-la-cancha/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/brothers-on-the-pitch/"
+                />
   </url>
   
   <url>
-    <loc>/work/modern-hospital/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/a-new-home/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/un-nuevo-hogar/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/a-new-home/"
+                />
   </url>
   
   <url>
-    <loc>/services/tax-filing/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/greater-than-death/</loc>
+    <lastmod>2019-02-04T21:35:29-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/mas-grande-que-la-muerte/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/greater-than-death/"
+                />
   </url>
   
   <url>
-    <loc>/work/cargo-terminal/</loc>
-    <lastmod>2018-11-18T12:33:46+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/a-family-together/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/una-familia-unida/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/a-family-together/"
+                />
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2018-12-06T09:29:16+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/cost-of-dreams/</loc>
+    <lastmod>2019-02-04T21:35:51-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/el-precio-de-los-suenos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/cost-of-dreams/"
+                />
   </url>
   
   <url>
-    <loc>/history/</loc>
-    <lastmod>2018-12-06T09:29:16+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/making-it-in-medellin/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/lograndolo-en-medellin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/making-it-in-medellin/"
+                />
   </url>
   
   <url>
-    <loc>/services/mergers/</loc>
-    <lastmod>2018-11-28T15:15:34+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/a-mothers-sacrifice/</loc>
+    <lastmod>2019-02-04T21:36:06-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/el-sacrificio-de-una-madre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/a-mothers-sacrifice/"
+                />
   </url>
   
   <url>
-    <loc>/services/business-sales/</loc>
-    <lastmod>2018-11-28T15:15:26+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/what-they-carry/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/lo-que-cargan/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/what-they-carry/"
+                />
   </url>
   
   <url>
-    <loc>/services/superannuation/</loc>
-    <lastmod>2018-11-28T15:14:54+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/home-about/</loc>
+    <lastmod>2019-03-25T09:35:17-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/home-about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/home-about/"
+                />
   </url>
   
   <url>
-    <loc>/services/business-advisory/</loc>
-    <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/home-help/</loc>
+    <lastmod>2019-03-25T09:35:17-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/home-help/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/home-help/"
+                />
   </url>
   
   <url>
-    <loc>/contact/</loc>
-    <lastmod>2018-02-22T17:01:34+07:00</lastmod>
+    <loc>https://uprooted.unc.edu/about/</loc>
+    <lastmod>2019-02-04T21:36:24-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/sobre-nosotros/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/about/"
+                />
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2018-02-12T15:37:57+07:00</lastmod>
+    <loc>https://uprooted.unc.edu/four-oh-four/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/four-oh-four/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/four-oh-four/"
+                />
   </url>
   
   <url>
-    <loc>/services/</loc>
-    <lastmod>2018-02-10T11:52:18+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/work/</loc>
-    <lastmod>2018-02-10T11:52:18+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/404/</loc>
-    <lastmod>2018-02-10T10:52:03+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
+    <loc>https://uprooted.unc.edu/categories/</loc>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/categories/"
+                />
   </url>
   
   <url>
-    <loc>/pages/</loc>
-    <lastmod>2018-12-06T09:29:16+10:00</lastmod>
+    <loc>https://uprooted.unc.edu/pages/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/pages/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/pages/"
+                />
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://uprooted.unc.edu/tags/</loc>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://uprooted.unc.edu/</loc>
+    <lastmod>2019-02-04T21:34:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://uprooted.unc.edu/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://uprooted.unc.edu/"
+                />
   </url>
   
 </urlset>

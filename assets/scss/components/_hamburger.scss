@@ -1,0 +1,95 @@
+.header-mobile {
+  color: $black;
+  z-index: 3;
+  background-color: $yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: top 0.3s;
+  padding: 10px 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 800px){
+    display: none;
+  }
+
+  a {
+    max-width: 35vw;
+    font-family: $font-logo;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+    height: auto;
+    z-index: 2;
+
+    &:hover {
+      color: $red;
+    }
+  
+  }
+
+  .hamburger {
+    padding: 15px 0 10px 10px;
+    outline: none;
+    z-index: 3;
+    cursor: pointer;
+  
+    
+  
+    @media screen and (min-width:800px) {
+      display: none;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background: $black;
+    }
+  
+    &.is-active {
+      .hamburger-inner::after {
+        width: inherit;
+        right: unset;
+      }
+    }
+  }
+}
+
+.header-mobile--white {
+  color: $white;
+  background-color: transparent;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .hamburger {
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background: $white;
+    }
+
+    &.is-active {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background: $black;
+      }
+    }
+
+  }
+}

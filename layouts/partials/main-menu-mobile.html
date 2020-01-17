@@ -1,0 +1,53 @@
+<div id="main-menu-mobile" class="main-menu-mobile">
+  <div class="inner-menu">
+    <button onclick="showStoryMenu()" class="inner-menu-button" id="stories-menu-button" type="button" aria-label="Menu"
+      aria-controls="navigation" aria-expanded="true/false">
+      <h2 class="inner-menu-title">{{ .Params.storiesHeader }}
+        <i id="story-menu-arrow" class="inner-menu-arrow fa fa-angle-down"></i>
+      </h2>
+    </button>
+    {{ partial "ybr-line.html" }}
+    <div class="inner-menu-items" id="story-menu-items">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a class="inner-menu-item" href="{{.URL}}">{{ .Pre }}</a>
+      {{end}}
+    </div>
+  </div>
+  <div class="inner-menu">
+    <button onclick="showPhotoMenu()" class="inner-menu-button" id="photo-menu-button" type="button" aria-label="Menu"
+      aria-controls="navigation" aria-expanded="true/false">
+      <h2 class="inner-menu-title">{{ .Params.photosHeader }}
+        <i id="photo-menu-arrow" class="inner-menu-arrow fa fa-angle-down"></i>
+      </h2>
+    </button>
+    {{ partial "ybr-line.html" }}
+    <div class="inner-menu-items" id="photo-menu-items">
+      {{ range .Site.Menus.photo }}
+      <a class="inner-menu-item" href="{{.URL}}">{{ .Pre }}</a>
+      </li>
+      {{end}}
+    </div>
+  </div>
+  <div class="bottom-menu">
+    <div class="about-social">
+      <a href="{{ .Site.BaseURL }}{{ .Params.aboutUsURL }}" class="about">{{ .Params.aboutUs}}</a>
+      <div class="header__lang-toggle">
+        {{ $currentLang := .Site.Language }}
+        {{ $currentPage := .Permalink }}
+        {{ range $.AllTranslations }}
+        {{ if eq $currentLang .Site.Language }}
+        <a class="header__lang-option active" href="{{ $currentPage }}">{{ .Language.Lang }}</a>
+        {{ else }}
+        <a class="header__lang-option" href="{{ .Permalink }}">{{ .Language.Lang }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+      <div class="social">
+        <a href="https://facebook.com/uprootedunc" target="_blank"><i class="social-icon fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/uprootedunc" target="_blank"><i class="social-icon fab fa-instagram"></i></a>
+        <a href="https://twitter.com/@uprootedunc" target="_blank"><i class="social-icon fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.center-quote-container {
+  font-family: $font-pullquote;
+  font-weight: $font-weight-bold;
+  margin: 45px 0;
+
+  @media screen and (max-width: 800px) {
+    margin: 35px 20px;
+    align-items: flex-start;
+  }
+
+  p {
+    font-size: 1.5rem !important;
+    width: 45rem;
+    min-width: 50vw;
+    line-height: inherit;
+    align-self: center;
+    text-align: center;
+    margin: 0 0 2vh 0 !important;
+
+    @media screen and (max-width: 800px) {
+      max-width: 90vw !important;
+      text-align: left;
+      margin-bottom: 1vh;
+    }
+  }
+
+  .ybr-line{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 36vw;
+    align-self: center;
+
+    @media screen and (max-width: 800px) {
+      align-self: flex-start;
+      margin-bottom: 1vh;
+      .ybr-section {
+        stroke-width: 5;
+      }
+    } 
+  }
+
+  #pull-quote__attr{
+    font-family: $font-pullquote-name;
+    font-weight: $font-weight-normal;
+    font-style: italic;
+    align-self: center;
+    max-width: 600px;
+    text-align: center;
+
+    @media screen and (max-width: 800px) {
+      text-align: left;
+      align-self: flex-start;
+    }
+  }
+}
+

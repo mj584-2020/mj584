@@ -1,0 +1,170 @@
+#bolivar-timeline {
+  // position: absolute;
+  margin-top: -10%;
+  padding-bottom: 10%;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: $font-int-body;
+  z-index: 3;
+
+ .row {
+   display:flex;
+   justify-content: center;
+   position:relative;
+   overflow:hidden;
+ }
+  h2 {
+    font-size:32px;
+    font-family:"DDinBold", sans-serif;
+    margin-top: 10px;
+  }
+  h3 {
+    font-family:"DDinBold", sans-serif;
+    font-size:24px;
+    margin-top: 10px;
+  }
+ .caption {
+   font-size: 13px;
+   display:block;
+ }
+  .timeline-image {
+    max-width: 100%;
+    max-height:150px;
+  }
+  h2.yellow {
+    color:$yellow;
+  }
+  h2.red {
+    color:$red;
+  }
+  h2.blue {
+    color:$blue;
+  }
+  .left {
+    text-align:right;
+    width:30%;
+    position: absolute;
+    // left: -25%;
+    // -webkit-animation: slideleft 0.5s forwards;
+    // -webkit-animation-delay: 1s;
+    // animation: slideleft 0.5s forwards;
+    // animation-delay: 0s;
+  }
+  .right {
+    text-align:left;
+    width:30%;
+    position: absolute;
+    // right: -25%;
+    // -webkit-animation: slideright 0.5s forwards;
+    // -webkit-animation-delay: 1s;
+    // animation: slideright 0.5s forwards;
+    // animation-delay: 0s;
+  }
+  @-webkit-keyframes slideleft {
+      100% { left: 0; }
+  }
+  @keyframes slideleft {
+      100% { left: 0; }
+  }
+  @-webkit-keyframes slideright {
+      100% { right: 0; }
+  }
+  @keyframes slideright {
+      100% { right: 0; }
+  }
+  .dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $yellow;
+    display:inline-block;
+  }
+  .center {
+    width: 50px;
+    position: relative;
+    text-align: center;
+    padding-top:30px;
+  }
+  .center:after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left:25px;
+    border-left: 1px solid $yellow;
+    transform: translate(-50%);
+  }
+  .yellow .dot {
+    background-color: $yellow;
+  }
+  .blue .dot {
+    background-color: $blue;
+  }
+  .red .dot {
+    background-color: $red;
+  }
+  .yellow .center:after {
+    border-left: 1px solid $yellow;
+  }
+  .blue .center:after {
+    border-left: 1px solid $blue;
+  }
+  .red .center:after {
+    border-left: 1px solid $red;
+  }
+  .timeline-content {
+    padding: 30px;
+    position: relative;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .timeline {
+    .row {
+      justify-content: center;
+      flex-flow: column;
+      position:relative;
+      overflow:hidden;
+    }
+    .timeline-content {
+      padding:0px;
+    }
+    .center {
+      display:none;
+    }
+    .left, .right {
+      width:100%;
+      text-align: center;
+    }
+    h2 {
+      position:relative;
+    }
+    h2:after, h2:before {
+      position: absolute;
+      top: 51%;
+      overflow: hidden;
+      width: 50%;
+      height: 1px;
+      content: '\a0';
+      background-color: $yellow;
+    }
+    h2:before {
+      margin-left: -50%;
+      text-align: right;
+    }
+    h2.blue:after, h2.blue:before {
+      background-color: $blue;
+    }
+    h2.red:after, h2.red:before {
+      background-color: $red;
+    }
+    .reorder {
+      flex-direction:column-reverse;
+    }
+  }
+}

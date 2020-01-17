@@ -1,0 +1,228 @@
+.about{
+  font-family: $font-about-info;
+
+  .story-hero {
+    color: $white;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    grid-area: story-hero;
+    justify-content: flex-start;
+    transition: 1s opacity;
+
+    @media screen and (max-width: 800px) {
+      height: 30vh;
+      padding-bottom: 0;
+      margin-top: 68px;
+    }
+
+    .about__hero-img {
+      background-color: $yellow;
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0px;
+      z-index: -1;
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+      border-radius: 1px;
+      object-fit: cover;
+      object-position: center;
+    
+      @media screen and (max-width: 800px) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 30vh;
+        border-radius: none;
+        margin: 0;
+        z-index: 0;
+        object-fit: cover;
+      }
+    }
+
+    .about__heading {
+      font-family: $font-content-heading;
+      margin-top: 8vh;
+      margin-bottom: 1vh;
+    }
+
+    .ybr-line {
+      max-width: 30vw;
+      margin-bottom: 3vh;
+    }
+  }
+
+  .about__intro {
+    margin: 0 auto;
+    width: 45rem;
+    min-width: 50vw;
+
+    @media screen and (max-width: 800px) {
+      max-width: 85vw;
+    }
+
+    .about__heading {
+      margin: 0;
+      margin-top: 45px;
+      font-size: 2.25rem;
+      font-family: $font-content-heading;
+
+      @media screen and (max-width: 800px) {
+        margin-top: 35px;
+      }
+    }
+
+    .center-quote-container {
+      margin: 30px 0 12px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 18px auto;
+    }
+  }
+
+  .about__filter-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 25px auto;
+    padding: 1vh 0;
+    z-index: 3;
+    background: #ededed;
+
+    .about__filter{
+      font-family: $font-about-info;
+      justify-content: space-around;
+      align-content: baseline;
+      flex-wrap: wrap;
+      width: 700px;
+      min-width: calc(50vw + 20px);
+      margin: 0 auto;
+
+      @media screen and (max-width: 800px) {
+        max-width: calc(85vw + 20px);
+      }
+  
+      div{
+        cursor: pointer;
+        margin: 10px;
+  
+        &:hover{
+          font-weight: bold; 
+          padding-bottom: 1px;
+          border-bottom: solid 1.2px $red;
+        }
+      }
+  
+  
+      .mixitup-control-active{
+        font-weight: bolder; 
+        padding-bottom: 1px;
+        border-bottom: solid 1.2px $red;
+      }
+    }
+  }
+
+  .about__content{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    .about__person{
+      flex-basis: 25rem;
+      padding: 0 35px;
+      border-radius: 10px;
+      margin: 15px 0;
+
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .about__info {
+        font-family: $font-about-info;
+        align-items: center;
+
+        a{
+          text-decoration: none;
+        }
+
+        a:hover{
+          text-decoration: underline;
+          text-decoration-color: $red;
+        }
+
+        .about__name {
+          color: $red;
+          font-weight: bold;
+        }
+
+        .about__role {
+          color: #7b7b7b;
+          font-size: 0.9rem;
+          margin-bottom: 2vh;
+          font-style: italic;
+        }
+
+        .about__links {
+          a {
+            color: $red;
+            i {
+              text-align: center;
+              height: 1.5rem;
+              width: 1.5rem;
+              font-size: 1.25rem;
+
+              &:hover {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about__thanks{
+    background: $light-grey;
+    padding: 35px 0;
+    text-align: center;
+
+    .about__heading {
+      font-family: $font-content-heading;
+      font-size: 1.5rem;
+      width: 45rem;
+      min-width: 50vw;
+      margin: 0 auto;
+      
+      @media screen and (max-width: 800px) {
+        max-width: 85vw;
+      }
+    }
+
+    .about__thanks-list {
+      list-style: none;
+      line-height: 1.5rem;
+      width: 45rem;
+      min-width: 50vw;
+      padding: 0;
+      margin: 15px auto 0;
+
+      @media screen and (max-width: 800px) {
+        max-width: 85vw;
+      }
+    }
+  }
+}

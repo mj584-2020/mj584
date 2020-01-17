@@ -1,0 +1,18 @@
+{{ $bundle := .Get 0 }}
+{{ $match := .Get 1 }}
+{{ $page := .Page.Site.GetPage $bundle }}
+{{ with $page }}
+{{ $resource := $page.Resources.GetMatch (printf "**%s*" $match )}}
+{{ with $resource }}
+<div class="photo-caption-container flex-column">
+  {{if eq .Params.alt "undefined"}} 
+  <img src="{{ .Params.image }}" alt="Venezuelans in Medellín, Colombia" />
+  {{else}} 
+  <img src="{{ .Params.image }}" alt="{{ .Params.alt }}" />
+  {{end}}
+  <div class="caption flex">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
+{{ end }}

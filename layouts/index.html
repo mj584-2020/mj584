@@ -1,0 +1,79 @@
+{{ define "title" }}Uprooted - {{ .Params.homepageTitle }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}home{{ end }}
+
+{{ define "meta_tags" }}
+<meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+<meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+<meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" itemprop="image" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="A view of downtown Medellín, Colombia" />
+<meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+<meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+<meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+{{ end }}
+
+{{ define "main"}}
+<div class="home__overlay" id="home-overlay"></div>
+<nav>
+  <!--full screen-->
+  <div class="header" id="header">
+    {{ partial "header.html" . }}
+  </div>
+  <!--hamburger-->
+  <div class="header-mobile" id="hamburger">
+    {{ partial "hamburger.html" . }}
+  </div>
+</nav>
+
+<div class="home__scroll">
+  <section class="panel flex-column bg-cover bg-position-center" id="home__intro">
+    <video class="home-video" muted>
+      <!-- Video is embedded in the WEBM format -->
+      <source src="/images/HomePageFinalFinal.mp4" type="video/mp4" />
+    </video>
+    {{ partial "main-menu-mobile.html" . }}
+    <div class="flex-column" id="home-text-container">
+      <div id="home-logo-line">
+        <img class="home__logo flex-column" src="{{ .Site.BaseURL }}images/uprooted-logo-gif.gif"
+          alt="Uprooted UNC logo" />
+        {{ partial "ybr-line.html" . }}
+      </div>
+      <h2 class="home__subtitle" id="home-subtitle">{{ .Params.Subtitle }}</h2>
+      <div class="home__desc" id="home-desc">{{ .Content }}</div>
+      <div class="home__explore">
+        <p>{{ .Params.cta }}</p>
+        <a href="#home__cards"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="home__cards">
+    {{ partial "home-cards.html" . }}
+  </section>
+
+  <section class="panel flex bg-cover bg-position-center" id="home__about">
+    {{ partial "home-about.html" . }}
+  </section>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{ $cards := resources.Get "js/cards.js" }}
+{{ $homepage := resources.Get "js/homepage.js" }}
+{{ $header := resources.Get "js/header.js" }}
+{{ $hamburger := resources.Get "js/hamburger.js"}}
+{{ $homepageBundle := slice $cards $homepage $header $hamburger | resources.Concat "js/homepageBundle.js" }}
+
+{{ if .Site.IsServer }}
+<script type="text/javascript" src="{{ $homepageBundle.RelPermalink }}"></script>
+{{ else }}
+<script type="text/javascript" src="{{ ($homepageBundle | minify | fingerprint).RelPermalink }}"></script>
+{{ end }}
+
+{{ end }}

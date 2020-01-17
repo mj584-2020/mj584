@@ -1,0 +1,40 @@
+<div class="container flex">
+  <div class="header__logo">
+    <a class="hamburger__logo" href="{{ .Site.BaseURL }}">Uprooted
+      <!-- <img alt="Uprooted Homepage"
+          src="{{ .Site.BaseURL }}images/logo-wide-white.png" /> -->
+    </a>
+  </div>
+  <div class="header__nav flex">
+    <div class="header__story-dropdown" id="header-story-dropdown">
+      <div class="header__stories-button">{{ .Params.storiesHeader}} <i class="fas fa-chevron-down"></i></div>
+      {{ partial "main-menu.html" . }}
+    </div>
+    <div class="header__photo-dropdown" id="header-photo-dropdown">
+      <div class="header__photo-button">{{ .Params.photosHeader }}<i class="fas fa-chevron-down"></i></div>
+      {{ partial "main-menu-photos.html" . }}
+    </div>
+
+    <a href="{{ .Site.BaseURL }}{{ .Params.aboutUsURL }}" class="header__about"
+      id="header__about">{{ .Params.aboutUs }}</a>
+    <div class="header__social-icons">
+      <a href="https://www.facebook.com/uprootedUNC/" target="_blank"><i
+          class="header__social-icon fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/@uprootedunc" target="_blank"><i class="header__social-icon fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/uprootedunc/" target="_blank"><i
+          class="header__social-icon fab fa-instagram"></i></a>
+    </div>
+    <div class="header__lang-toggle">
+      {{ $currentLang := .Site.Language }}
+      {{ $currentPage := .Permalink }}
+      {{ range $.AllTranslations }}
+      {{ if eq $currentLang .Site.Language }}
+      <a class="header__lang-option active" href="{{ $currentPage }}">{{ .Language.Lang }}</a>
+      {{ else }}
+      <a class="header__lang-option" href="{{ .Permalink }}">{{ .Language.Lang }}</a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+</div>

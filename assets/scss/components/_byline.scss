@@ -1,0 +1,48 @@
+.byline-container {
+  width: 45rem;
+  min-width: 50vw;
+  margin: 0 auto;
+
+  @media screen and (max-width: 800px) {
+    max-width: 85vw;
+  }
+
+  .byline {
+    font-family: $font-byline;
+    background-color: $light-grey;
+    padding: 10px 15px;
+    margin: 6vh 0;
+    width: 63%;
+    font-size: 12px;
+    align-items: flex-start;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    transition: 1s opacity;
+  
+    span {
+      font-weight: $font-weight-light;
+    }
+  
+    .ybr-line {
+      margin-top: 1vh;
+      max-width: 10vw;
+  
+      .ybr-section {
+        stroke-width: 7;
+      }
+    }
+  
+    @media screen and (max-width: 800px) {
+      margin: 15px auto 25px;
+      width: 85vw;
+  
+      .ybr-line {
+        max-width: 40vw;
+  
+        .ybr-section {
+          stroke-width: 4;
+        }
+      }
+    }
+  }
+}
